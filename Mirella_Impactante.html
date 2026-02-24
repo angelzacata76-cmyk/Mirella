@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Mirella ✨</title>
+
+<style>
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: black;
+    color:white;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+}
+
+#intro{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    animation: fadeOut 2s ease 3s forwards;
+}
+
+#intro h1{
+    font-size:28px;
+    letter-spacing:2px;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeOut{
+    to{opacity:0; visibility:hidden;}
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+.card{
+    max-width:500px;
+    opacity:0;
+    animation: showCard 2s ease 3.5s forwards;
+}
+
+@keyframes showCard{
+    to{opacity:1;}
+}
+
+h2{
+    color:#ff4d6d;
+}
+
+p{
+    line-height:1.7;
+    font-size:17px;
+}
+
+button{
+    margin-top:25px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d6d;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff1e4d;
+    transform:scale(1.08);
+}
+
+.hidden{
+    display:none;
+    margin-top:20px;
+    font-size:18px;
+    color:#ffb6c1;
+    font-weight:500;
+}
+</style>
+</head>
+
+<body>
+
+<div id="intro">
+    <h1>Hay personas que no se olvidan…</h1>
+</div>
+
+<div class="card">
+    <h2>Feliz cumpleaños, Mirella 🎂✨</h2>
+
+    <p>
+        No voy a justificar el retraso…  
+        solo voy a decir la verdad.  
+        Hay fechas que pasan,  
+        pero hay personas que se quedan.  
+        <br><br>
+        Aunque ahora la vida nos tenga en otra versión,  
+        sigo reconociendo lo especial que eres.  
+        <br><br>
+        Y sería mentira decir que tu día pasó desapercibido…  
+        porque cuando alguien marca tu historia,  
+        no se borra tan fácil 😉
+    </p>
+
+    <button onclick="mostrar()">Toca aquí</button>
+
+    <div id="final" class="hidden">
+        Tal vez llegué tarde…  
+        pero mi intención contigo siempre ha sido genuina 💫
+    </div>
+</div>
+
+<script>
+function mostrar(){
+    document.getElementById("final").style.display="block";
+}
+</script>
+
+</body>
+</html>
